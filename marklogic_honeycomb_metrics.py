@@ -16,7 +16,7 @@ USERNAME = "admin"
 PASSWORD = "admin"
 
 # Honeycomb configuration
-HONEYCOMB_API_KEY = "YOUR_HONEYCOMB_API_KEY"
+HONEYCOMB_API_KEY = "KEY"
 HONEYCOMB_DATASET = "MarkLogicMetrics"
 
 print("Initializing MarkLogic client...")
@@ -130,7 +130,7 @@ def fetch_metric(resource_type, parent_id=None):
         print(f"Full traceback:", traceback.format_exc())
         return None
 
-def collect_node_cpu_usage(callback_options):
+def collect_host_metrics(callback_options):
     """Collect all available MarkLogic host metrics."""
     print("\nStarting metric collection...")
     
@@ -146,19 +146,51 @@ def collect_node_cpu_usage(callback_options):
                 for metric_name, value in status.items():
                     try:
                         value = float(value)  # Convert to float
-                        # Create proper Observation object
+                        # Create proper Observation object with source attribute
                         observation = Observation(
                             value=value,
                             attributes={
+                                "source": "database",  # Added source identifier
                                 "host": host_name,
                                 "metric_name": metric_name,
                                 "unit": "1"
                             }
                         )
                         yield observation
-                        print(f"Added observation for {metric_name}: {value}")
+                        print(f"Added database observation for {metric_name}: {value}")
                     except (ValueError, TypeError) as e:
                         print(f"Skipping metric {metric_name}: {e}")
+
+def collect_database_metrics(callback_options):
+    """Collect all available MarkLogic database metrics."""
+    print("\nStarting database metric collection...")
+    
+    # Get metrics data once
+    data = fetch_metric('databases')
+    if data and 'database-default-list' in data:
+        items = data['database-default-list']['list-items'].get('list-item', [])
+        for item in items:
+            db_name = item.get('nameref', 'unknown')
+            if 'status' in item:
+                status = item['status']
+                # Collect all available metrics
+                for metric_name, value in status.items():
+                    try:
+                        value = float(value)  # Convert to float
+                        # Create proper Observation object with source attribute
+                        observation = Observation(
+                            value=value,
+                            attributes={
+                                "source": "database",  # Added source identifier
+                                "database": db_name,
+                                "metric_name": metric_name,
+                                "unit": "1"
+                            }
+                        )
+                        yield observation
+                        print(f"Added database observation for {db_name} - {metric_name}: {value}")
+                    except (ValueError, TypeError) as e:
+                        print(f"Skipping metric {metric_name} for database {db_name}: {e}")
 
 # Now configure OpenTelemetry
 print("Configuring OpenTelemetry with Honeycomb...")
@@ -180,21 +212,20 @@ honeycomb_reader = PeriodicExportingMetricReader(
 # Add a custom console exporter that's more verbose
 class VerboseConsoleMetricExporter(ConsoleMetricExporter):
     def export(self, metrics_data, **kwargs):
-        print("\n================================ Console Metric Export ===")
-        print(f"Exporting {len(metrics_data.resource_metrics)} resource metrics")
-        for resource_metrics in metrics_data.resource_metrics:
-            print(f"\nResource attributes: {resource_metrics.resource.attributes}")
-            for scope_metrics in resource_metrics.scope_metrics:
-                for metric in scope_metrics.metrics:
-                    print(f"\nMetric: {metric.name}")
-                    try:
+        print("\n=== Metric Export ===")
+        try:
+            for resource_metrics in metrics_data.resource_metrics:
+                for scope_metrics in resource_metrics.scope_metrics:
+                    for metric in scope_metrics.metrics:
                         for point in metric.data.data_points:
-                            print(f"  Value: {point.value}")
-                            print(f"  Attributes: {point.attributes}")
-                            print(f"  Timestamp: {point.timestamp}")
-                    except Exception as e:
-                        print(f"Error processing metric point: {e}")
-        return super().export(metrics_data, **kwargs)
+                            # Only print the source, metric name, and value
+                            source = point.attributes.get('source', 'unknown')
+                            metric_name = point.attributes.get('metric_name', 'unknown')
+                            value = point.value
+                            print(f"{source}: {metric_name} = {value}")
+        except Exception as e:
+            print(f"Error in metric export: {e}")
+        return True  # Skip parent class export to avoid metadata output
 
 # Update the console reader to use the verbose exporter
 console_reader = PeriodicExportingMetricReader(
@@ -207,7 +238,7 @@ print("Initializing meter provider...")
 resource = Resource.create({
     "service.name": "marklogic-metrics",
     "service.version": "1.0.0",
-    "host.name": "marklogic-host"  # Add host identifier
+    "host.name": "marklogic-host"
 })
 
 meter_provider = MeterProvider(
@@ -220,27 +251,41 @@ metrics.set_meter_provider(meter_provider)
 meter = metrics.get_meter(__name__, schema_url="https://opentelemetry.io/schemas/1.9.0")
 
 print("Defining metrics...")
-node_metrics = meter.create_observable_gauge(
-    name="marklogic.host.metrics",  # Changed to plural
+host_metrics = meter.create_observable_gauge(
+    name="marklogic.host.metrics",
     description="All MarkLogic host metrics",
     unit="1",
-    callbacks=[collect_node_cpu_usage]
+    callbacks=[collect_host_metrics]
+)
+
+database_metrics = meter.create_observable_gauge(
+    name="marklogic.database.metrics",
+    description="All MarkLogic database metrics",
+    unit="1",
+    callbacks=[collect_database_metrics]
 )
 
 def main():
-    print("\n=== Starting MarkLogic Host Metrics Collection ===")
+    print("\n=== Starting MarkLogic Metrics Collection ===")
     
     try:
         while True:
             print(f"\n=== Collection Cycle at {time.strftime('%Y-%m-%d %H:%M:%S')} ===")
             
-            # Force metric collection and export
-            metrics_list = list(collect_node_cpu_usage(None))
-            print(f"Collected {len(metrics_list)} metrics")
+            # Force metric collection and export for hosts
+            # host_metrics_list = list(collect_host_metrics(None))
+            print(f"Collected {len(host_metrics_list)} host metrics")
+            
+            # Force metric collection and export for databases
+            db_metrics_list = list(collect_database_metrics(None))
+            print(f"Collected {len(db_metrics_list)} database metrics")
             
             # Explicitly observe each metric
-            for observation in metrics_list:
-                node_metrics.observe(observation.value, observation.attributes)
+            for observation in host_metrics_list:
+                host_metrics.observe(observation.value, observation.attributes)
+                
+            for observation in db_metrics_list:
+                database_metrics.observe(observation.value, observation.attributes)
             
             # Force export
             honeycomb_reader.force_flush()
