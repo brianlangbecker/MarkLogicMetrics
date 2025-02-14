@@ -1,0 +1,365 @@
+2025-01-23 09:28:06 INFO Processing started for intake
+2025-01-23 09:28:06 INFO Processing started for intake
+2025-01-27 10:41:04.680 Info: legal-instrument-functions.xqy: missing contact:
+2025-01-27 10:41:04.680 Info: legal-instrument-functions.xqy: missing contact:
+2025-01-27 10:41:04.680 Info: legal-instrument-functions.xqy: missing contact:
+2025-01-27 10:41:04.680 Info: legal-instrument-functions.xqy: missing contact:
+2025-01-27 10:41:04.680 Info: legal-instrument-functions.xqy: missing contact:
+2025-01-27 10:41:04.680 Info: legal-instrument-functions.xqy: missing contact:
+2025-01-27 10:41:04.680 Info: legal-instrument-functions.xqy: missing contact:
+2025-01-27 10:41:04.680 Info: legal-instrument-functions.xqy: missing contact:
+2025-01-27 10:41:04.680 Info: legal-instrument-functions.xqy: missing contact:
+2025-01-27 12:33:00.001 Info: Script: wco-admin cleanup-expired-sessions
+2025-01-26 22:03:28.239 Info: Stopping data encryption of s3://wc-test-data-backup/uat/wco/20250124-2200003083220/server.xml
+2025-01-26 22:03:28.239 Info: Stopping data encryption of s3://wc-test-data-backup/uat/wco/20250124-2200003083220/server.xml
+2025-01-27 12:33:00.001 Info: Script: wco-admin cleanup-expired-sessions
+2025-01-26 23:02:00.224 Info: Memory 41% phys=63610 size=27005(42%) rss=6108(9%) huge=20480(32%) anon=5729(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-01-26 23:02:00.224 Info: Memory 41% phys=63610 size=27005(42%) rss=6108(9%) huge=20480(32%) anon=5729(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-01-26 23:02:00.224 Info: Memory 41% phys=63610 size=27005(42%) rss=6108(9%) huge=20480(32%) anon=5729(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-01-27 12:33:00.001 Info: Script: wco-admin cleanup-expired-sessions
+2025-01-26 22:03:28.239 Info: Stopping data encryption of s3://wc-test-data-backup/uat/wco/20250124-2200003083220/server.xml
+2025-01-26 22:03:28.239 Info: Stopping data encryption of s3://wc-test-data-backup/uat/wco/20250124-2200003083220/server.xml
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-27 12:33:00.001 Info: Script: wco-admin cleanup-expired-sessions
+2025-01-27 12:33:00.001 Info: Script: wco-admin cleanup-expired-sessions
+2025-01-27 12:33:00.001 Info: Script: wco-admin cleanup-expired-sessions
+2025-01-27 12:33:00.001 Info: Script: wco-admin cleanup-expired-sessions
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-27 12:33:00.001 Info: Script: wco-admin cleanup-expired-sessions
+2025-01-27 12:33:00.001 Info: Script: wco-admin cleanup-expired-sessions
+2025-01-27 12:33:00.001 Info: Script: wco-admin cleanup-expired-sessions
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-27 10:41:04.680 Info: legal-instrument-functions.xqy: missing contact:
+2025-01-27 10:41:04.680 Info: legal-instrument-functions.xqy: missing contact:
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-27 10:41:04.680 Info: legal-instrument-functions.xqy: missing contact:
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-27 10:41:04.680 Info: legal-instrument-functions.xqy: missing contact:
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-27 12:33:00.001 Info: Script: wco-admin cleanup-expired-sessions
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-27 12:33:00.001 Info: Script: wco-admin cleanup-expired-sessions
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-27 12:33:00.001 Info: Script: wco-admin cleanup-expired-sessions
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()
+2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns="xdmp:zip"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx"), fn:doc("/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
+2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
+2025-01-23 09:26:17.753 Notice:+ $intake-id = "823783237863574986"
+2025-01-23 09:26:17.753 Notice:+ $question-id = ()
+2025-01-23 09:26:17.753 Notice:+ $file-name = ()
+2025-01-23 09:26:17.753 Notice:+ $part = "all"
+2025-01-23 09:26:17.753 Notice:+ $root = "/practices/2898207634023500640/client-intake/823783237863574986/..."
+2025-01-23 09:26:17.753 Notice:+ $uris = ("/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...", "/practices/2898207634023500640/client-intake/823783237863574986/...")
+2025-01-23 09:26:17.753 Notice:+ $names = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $map = map:map(<map:map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" .../>)
+2025-01-23 09:26:17.753 Notice:+ $dw-fact = ()

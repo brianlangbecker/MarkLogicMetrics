@@ -1,0 +1,60 @@
+processors:
+  transform:
+    log_statements:
+      - context: log
+        statements:
+          # Explicitly match lines where 'Notice' is in the sev attribute
+          - set(cache["notice_start"], attributes["msg"]) where IsMatch(attributes["sev"], "Notice")
+
+          # Initialize combined_logs if it's not already set
+          - set(cache["combined_logs"], attributes["msg"]) where cache["combined_logs"] == nil and cache["notice_start"] != nil
+
+          # Append continuation lines to the combined_logs if they match and we have a starting line
+          - set(cache["combined_logs"], Concat([cache["combined_logs"], attributes["msg"]], " ")) where IsMatch(attributes["sev"], "Notice:+") and cache["notice_start"] != nil
+
+          # Set the combined logs as the new body when processing the last continuation line
+          - set(body, cache["combined_logs"]) where cache["combined_logs"] != nil and IsMatch(attributes["sev"], "Notice:+") == false
+
+          # Clear the cache when done processing the group
+          - delete_key(cache, "notice_start") where IsMatch(attributes["sev"], "Notice:") == false
+          - delete_key(cache, "combined_logs") where IsMatch(attributes["sev"], "Notice:") == false
+
+  batch: {}
+
+  attributes:
+    actions:
+      - key: log.type
+        value: marklogic
+        action: insert
+receivers:
+  filelog:
+    include:
+      - /Users/brianlangbecker/Documents/GitHub/MarkLogicServer/MarkLogicLogs/logs/logfile.log
+    operators:
+      - type: regex_parser
+        regex: '^(?P<time>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{3}) (?P<sev>Info|ERROR|WARN|Notice): (?P<msg>.*)$'
+        parse_from: body
+        timestamp:
+          parse_from: attributes.time
+          layout: '%Y-%m-%d %H:%M:%S'
+        severity:
+          parse_from: attributes.sev
+      - type: regex_parser
+        regex: '^(?P<time>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{3}) (?P<sev>Notice:\+) (?P<msg>.*)$'
+        parse_from: body
+
+
+exporters:
+  logging:
+    verbosity: detailed
+  otlp:
+    endpoint: "localhost:4317"
+    tls:
+      insecure: true
+
+service:
+  pipelines:
+    logs:
+      receivers: [filelog]
+      processors: [batch, transform, attributes]
+      exporters: [logging]
