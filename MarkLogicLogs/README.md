@@ -1,60 +1,74 @@
-# README
+# MarkLogic Log Collector
 
-This document is designed to guide the process of loading MarkLogic logs into Honeycomb. Logs are collected using the OpenTelemetry Collector and exported to Honeycomb using the otlp/logs exporter. Logs come in the format of single line or multiline. The collector.yml file is used to configure the collector to handle both formats. This is designed to read the newest logs from the logfile.log file.
+Collects MarkLogic logs and exports them to Honeycomb using OpenTelemetry Collector.
 
-## How to Start the Collector
+## Setup
 
-To start the collector, use the following commands:
+1. Download and install the OpenTelemetry Collector from the [official releases page](https://github.com/open-telemetry/opentelemetry-collector-releases)
 
-1. Download the OpenTelemetry Collector binary from the [official releases page](https://github.com/open-telemetry/opentelemetry-collector-releases).
+2. Configure collector.yml:
 
-2. Extract the downloaded file:
+   - Update log file path in `include: [ logs/*log.txt ]`
+   - Set your Honeycomb API key
+   - Set your Honeycomb dataset name
+   - To collect existing logs, uncomment:
+     ```yaml
+     # start_at: beginning
+     ```
 
+3. Start the collector:
    ```bash
-   tar -xvzf otelcol_<version>_<platform>.tar.gz
-   cd otelcol_<version>_<platform>
+   otelcol --config collector.yml
    ```
 
-3. Verify the collector is working by running:
+## Test Log Generation
 
-   ```bash
-   ./otelcol --version
-   ```
+**Note:** Log dates must be within the last 60 days and in UTC timezone for Honeycomb to accept them.
 
-4. Update the collector.yml file to point to the logfile.log file.
-
-5. Update the collector.yml file to point to the Honeycomb API key and dataset.
-
-- Set your HONEYCOMB_API_KEY in the collector.yml file
-- Set your HONEYCOMB_DATASET in the collector.yml file
-
-6. Start the collector with your configuration:
-
-   ```bash
-   ./otelcol --config collector.yml
-   ```
-
-7. Test Logging Output
-   The following commands will produce logging output for testing purposes:
-
-### Single Line Echo:
+### Single Line Log:
 
 ```bash
-echo '2025-01-27 12:33:00.001 Info: Script: wco-admin cleanup-expired-sessions' >> logfile.log
+# Current UTC date minus 1 hour
+echo '$(date -u -v-1H "+%Y-%m-%d %H:%M:%S").001 Info: Script: wco-admin cleanup-expired-sessions' >> logs/logfile.log.txt
 ```
 
-### Multiline Echo:
+### Multiline Log:
 
 ```bash
-echo "2025-01-23 09:26:17.753 Notice: XDMP-ZIPDUPNAME: xdmp:zip-create(<parts xmlns=\"xdmp:zip\"><part>Bill of Sale_.docx</part><part>Bill...</part>...</parts>, (fn:doc(\"/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_bankaccount_documents/Bill of Sale.docx\"), fn:doc(\"/practices/2898207634023500640/client-intake/823783237863574986/attachments/additionaldocs_question/Bill of Sale.docx\"), fn:doc(\"/practices/2898207634023500640/client-intake/823783237863574986/attachments/property_realproperty_documents/Bill of Sale.docx\"))) -- Duplicate names not allowed in zip files: Bill of Sale_.docx
-2025-01-23 09:26:17.753 Notice:+in /api/client-intake/file-download.xqy, at 44:4 [1.0-ml]
-2025-01-23 09:26:17.753 Notice:+ \$intake-id = \"823783237863574986\"
-2025-01-23 09:26:17.753 Notice:+ \$question-id = ()
-2025-01-23 09:26:17.753 Notice:+ \$file-name = ()
-2025-01-23 09:26:17.753 Notice:+ \$part = \"all\"
-2025-01-23 09:26:17.753 Notice:+ \$root = \"/practices/2898207634023500640/client-intake/823783237863574986/...\"
-2025-01-23 09:26:17.753 Notice:+ \$uris = (\"/practices/2898207634023500640/client-intake/823783237863574986/...\", \"/practices/2898207634023500640/client-intake/823783237863574986/...\", \"/practices/2898207634023500640/client-intake/823783237863574986/...\")
-2025-01-23 09:26:17.753 Notice:+ \$names = map:map(<map:map xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" .../>)
-2025-01-23 09:26:17.753 Notice:+ \$map = map:map(<map:map xmlns:xs=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" .../>)
-2025-01-23 09:26:17.753 Notice:+ \$dw-fact = ()" >> logfile.log
+# Current UTC date minus 1 hour
+timestamp=$(date -u -v-24H "+%Y-%m-%d %H:%M:%S")
+echo "$timestamp.753 Notice: XDMP-ZIPDUPNAME: Error message
+$timestamp.753 Notice:+ Stack trace line 1
+$timestamp.753 Notice:+ Stack trace line 2" >> logs/logfile.log.txt
 ```
+
+### Full Test Suite:
+
+To run a comprehensive test with various log patterns:
+
+```bash
+chmod 755 test-script.sh
+./test-script.sh >> logs/logfile.log.txt
+```
+
+**Note:** The test script is configured for macOS. For Linux or other operating systems, you'll need to modify the `date` commands in the script. On Linux, replace:
+
+```bash
+date -j -f %s $timestamp
+```
+
+with:
+
+```bash
+date -u -d "@$timestamp"
+```
+
+This will generate a variety of test log entries in the logfile.log.txt file for testing the collector's parsing capabilities.
+
+## Troubleshooting
+
+- Check file paths in collector.yml
+- Verify Honeycomb credentials
+- For historical logs, enable `start_at: beginning`
+- Check console output for parsing errors
+- Ensure log dates are within the last 60 days and in UTC timezone

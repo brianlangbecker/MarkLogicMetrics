@@ -1,0 +1,120 @@
+2025-02-18 13:35:33.197 Info: Memory 42% phys=63610 size=27389(43%) rss=6491(10%) huge=20480(32%) anon=6114(9%) file=449(0%) forest=4181(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 13:35:33.266 Info: Memory 42% phys=63610 size=27351(42%) rss=6494(10%) huge=20480(32%) anon=6076(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 13:40:33.177 Info: Memory 42% phys=63610 size=27349(42%) rss=6456(10%) huge=20480(32%) anon=6074(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 13:40:33.301 Info: Memory 41% phys=63610 size=27108(42%) rss=6213(9%) huge=20480(32%) anon=5833(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 13:40:33.574 Info: Saving /var/opt/MarkLogic/Forests/Meters/00002148
+2025-02-18 13:40:33.707 Info: Saved 26 MB in 1 sec at 23 MB/sec to /var/opt/MarkLogic/Forests/Meters/00002148
+2025-02-18 13:40:33.744 Info: Merging 36 MB from /var/opt/MarkLogic/Forests/Meters/00002146 and /var/opt/MarkLogic/Forests/Meters/00002148 to /var/opt/MarkLogic/Forests/Meters/0000214a
+2025-02-18 13:40:33.813 Info: Merged 35 MB in 1 sec at 24 MB/sec to /var/opt/MarkLogic/Forests/Meters/0000214a
+2025-02-18 13:40:33.901 Info: Deleted 26 MB at 8140 MB/sec /var/opt/MarkLogic/Forests/Meters/00002146
+2025-02-18 13:40:33.904 Info: Deleted 26 MB at 8793 MB/sec /var/opt/MarkLogic/Forests/Meters/00002148
+2025-02-18 13:45:33.364 Info: Memory 41% phys=63610 size=26863(42%) rss=5966(9%) huge=20480(32%) anon=5588(8%) file=448(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 13:45:33.347 Info: Memory 41% phys=63610 size=26883(42%) rss=5986(9%) huge=20480(32%) anon=5608(8%) file=448(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 13:50:33.611 Info: Saving /var/opt/data1/Forests/wco/000403b6
+2025-02-18 13:50:33.838 Info: Saved 15 MB at 66 MB/sec to /var/opt/data1/Forests/wco/000403b6
+2025-02-18 13:50:33.866 Info: Merging 21 MB from /var/opt/data1/Forests/wco/000403b6 and /var/opt/data1/Forests/wco/000403b5 to /var/opt/data1/Forests/wco/000403b7
+2025-02-18 13:50:33.883 Info: Merged 8 MB at 25 MB/sec to /var/opt/data1/Forests/wco/000403b7
+2025-02-18 13:50:33.929 Info: Deleted 8 MB at 1750 MB/sec /var/opt/data1/Forests/wco/000403b5
+2025-02-18 13:50:33.933 Info: Deleted 15 MB at 3669 MB/sec /var/opt/data1/Forests/wco/000403b6
+2025-02-18 13:55:33.366 Notice: Finished backup of forest wco to s3://wc-test-data-backup/uat/wco/20250126-2200003696000, jobid=7884140171408662800
+2025-02-18 13:55:33.438 Notice+: Finishing backup of forest wco to s3://wc-test-data-backup/uat/wco/20250126-2200003696000/Forests/wco
+2025-02-18 13:55:33.483 Notice+: Finished backup of forest wco to s3://wc-test-data-backup/uat/wco/20250126-2200003696000/Forests/wco
+2025-02-18 13:55:33.483 Notice+: Finished 1-forest database backup to s3://wc-test-data-backup/uat/wco/20250126-2200003696000
+2025-02-18 14:00:33.061 Info: Stopping data encryption of s3://wc-test-data-backup/uat/wco/20250124-2200003083220/Forests
+2025-02-18 14:00:33.523 Info: Deleted 184006 MB in 59 sec at 3104 MB/sec s3://wc-test-data-backup/uat/wco/20250119-2200003531760
+2025-02-18 14:05:33.224 Info: Memory 41% phys=63610 size=27005(42%) rss=6108(9%) huge=20480(32%) anon=5729(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 14:05:33.396 Info: Memory 42% phys=63610 size=27275(42%) rss=6383(10%) huge=20480(32%) anon=5999(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 14:15:33.224 Info: Memory 41% phys=63610 size=27005(42%) rss=6108(9%) huge=20480(32%) anon=5729(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 14:15:33.396 Info: Memory 42% phys=63610 size=27275(42%) rss=6383(10%) huge=20480(32%) anon=5999(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 14:25:33.224 Info: Memory 41% phys=63610 size=27005(42%) rss=6108(9%) huge=20480(32%) anon=5729(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 14:25:33.396 Info: Memory 42% phys=63610 size=27275(42%) rss=6383(10%) huge=20480(32%) anon=5999(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 13:48:38.197 Info: Memory 42% phys=63610 size=27389(43%) rss=6491(10%) huge=20480(32%) anon=6114(9%) file=449(0%) forest=4181(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 13:48:38.266 Info: Memory 42% phys=63610 size=27351(42%) rss=6494(10%) huge=20480(32%) anon=6076(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 13:53:38.177 Info: Memory 42% phys=63610 size=27349(42%) rss=6456(10%) huge=20480(32%) anon=6074(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 13:53:38.301 Info: Memory 41% phys=63610 size=27108(42%) rss=6213(9%) huge=20480(32%) anon=5833(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 13:53:38.574 Info: Saving /var/opt/MarkLogic/Forests/Meters/00002148
+2025-02-18 13:53:38.707 Info: Saved 26 MB in 1 sec at 23 MB/sec to /var/opt/MarkLogic/Forests/Meters/00002148
+2025-02-18 13:53:38.744 Info: Merging 36 MB from /var/opt/MarkLogic/Forests/Meters/00002146 and /var/opt/MarkLogic/Forests/Meters/00002148 to /var/opt/MarkLogic/Forests/Meters/0000214a
+2025-02-18 13:53:38.813 Info: Merged 35 MB in 1 sec at 24 MB/sec to /var/opt/MarkLogic/Forests/Meters/0000214a
+2025-02-18 13:53:38.901 Info: Deleted 26 MB at 8140 MB/sec /var/opt/MarkLogic/Forests/Meters/00002146
+2025-02-18 13:53:38.904 Info: Deleted 26 MB at 8793 MB/sec /var/opt/MarkLogic/Forests/Meters/00002148
+2025-02-18 13:58:38.364 Info: Memory 41% phys=63610 size=26863(42%) rss=5966(9%) huge=20480(32%) anon=5588(8%) file=448(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 13:58:38.347 Info: Memory 41% phys=63610 size=26883(42%) rss=5986(9%) huge=20480(32%) anon=5608(8%) file=448(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 14:03:38.611 Info: Saving /var/opt/data1/Forests/wco/000403b6
+2025-02-18 14:03:38.838 Info: Saved 15 MB at 66 MB/sec to /var/opt/data1/Forests/wco/000403b6
+2025-02-18 14:03:38.866 Info: Merging 21 MB from /var/opt/data1/Forests/wco/000403b6 and /var/opt/data1/Forests/wco/000403b5 to /var/opt/data1/Forests/wco/000403b7
+2025-02-18 14:03:38.883 Info: Merged 8 MB at 25 MB/sec to /var/opt/data1/Forests/wco/000403b7
+2025-02-18 14:03:38.929 Info: Deleted 8 MB at 1750 MB/sec /var/opt/data1/Forests/wco/000403b5
+2025-02-18 14:03:38.933 Info: Deleted 15 MB at 3669 MB/sec /var/opt/data1/Forests/wco/000403b6
+2025-02-18 14:08:38.366 Notice: Finished backup of forest wco to s3://wc-test-data-backup/uat/wco/20250126-2200003696000, jobid=7884140171408662800
+2025-02-18 14:08:38.438 Notice+: Finishing backup of forest wco to s3://wc-test-data-backup/uat/wco/20250126-2200003696000/Forests/wco
+2025-02-18 14:08:38.483 Notice+: Finished backup of forest wco to s3://wc-test-data-backup/uat/wco/20250126-2200003696000/Forests/wco
+2025-02-18 14:08:38.483 Notice+: Finished 1-forest database backup to s3://wc-test-data-backup/uat/wco/20250126-2200003696000
+2025-02-18 14:13:38.061 Info: Stopping data encryption of s3://wc-test-data-backup/uat/wco/20250124-2200003083220/Forests
+2025-02-18 14:13:38.523 Info: Deleted 184006 MB in 59 sec at 3104 MB/sec s3://wc-test-data-backup/uat/wco/20250119-2200003531760
+2025-02-18 14:18:38.224 Info: Memory 41% phys=63610 size=27005(42%) rss=6108(9%) huge=20480(32%) anon=5729(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 14:18:38.396 Info: Memory 42% phys=63610 size=27275(42%) rss=6383(10%) huge=20480(32%) anon=5999(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 14:28:38.224 Info: Memory 41% phys=63610 size=27005(42%) rss=6108(9%) huge=20480(32%) anon=5729(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 14:28:38.396 Info: Memory 42% phys=63610 size=27275(42%) rss=6383(10%) huge=20480(32%) anon=5999(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 14:38:38.224 Info: Memory 41% phys=63610 size=27005(42%) rss=6108(9%) huge=20480(32%) anon=5729(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 14:38:38.396 Info: Memory 42% phys=63610 size=27275(42%) rss=6383(10%) huge=20480(32%) anon=5999(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 20:50:51.197 Info: Memory 42% phys=63610 size=27389(43%) rss=6491(10%) huge=20480(32%) anon=6114(9%) file=449(0%) forest=4181(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 20:50:51.266 Info: Memory 42% phys=63610 size=27351(42%) rss=6494(10%) huge=20480(32%) anon=6076(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 20:55:51.177 Info: Memory 42% phys=63610 size=27349(42%) rss=6456(10%) huge=20480(32%) anon=6074(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 20:55:51.301 Info: Memory 41% phys=63610 size=27108(42%) rss=6213(9%) huge=20480(32%) anon=5833(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 20:55:51.574 Info: Saving /var/opt/MarkLogic/Forests/Meters/00002148
+2025-02-18 20:55:51.707 Info: Saved 26 MB in 1 sec at 23 MB/sec to /var/opt/MarkLogic/Forests/Meters/00002148
+2025-02-18 20:55:51.744 Info: Merging 36 MB from /var/opt/MarkLogic/Forests/Meters/00002146 and /var/opt/MarkLogic/Forests/Meters/00002148 to /var/opt/MarkLogic/Forests/Meters/0000214a
+2025-02-18 20:55:51.813 Info: Merged 35 MB in 1 sec at 24 MB/sec to /var/opt/MarkLogic/Forests/Meters/0000214a
+2025-02-18 20:55:51.901 Info: Deleted 26 MB at 8140 MB/sec /var/opt/MarkLogic/Forests/Meters/00002146
+2025-02-18 20:55:51.904 Info: Deleted 26 MB at 8793 MB/sec /var/opt/MarkLogic/Forests/Meters/00002148
+2025-02-18 21:00:51.364 Info: Memory 41% phys=63610 size=26863(42%) rss=5966(9%) huge=20480(32%) anon=5588(8%) file=448(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 21:00:51.347 Info: Memory 41% phys=63610 size=26883(42%) rss=5986(9%) huge=20480(32%) anon=5608(8%) file=448(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 21:05:51.611 Info: Saving /var/opt/data1/Forests/wco/000403b6
+2025-02-18 21:05:51.838 Info: Saved 15 MB at 66 MB/sec to /var/opt/data1/Forests/wco/000403b6
+2025-02-18 21:05:51.866 Info: Merging 21 MB from /var/opt/data1/Forests/wco/000403b6 and /var/opt/data1/Forests/wco/000403b5 to /var/opt/data1/Forests/wco/000403b7
+2025-02-18 21:05:51.883 Info: Merged 8 MB at 25 MB/sec to /var/opt/data1/Forests/wco/000403b7
+2025-02-18 21:05:51.929 Info: Deleted 8 MB at 1750 MB/sec /var/opt/data1/Forests/wco/000403b5
+2025-02-18 21:05:51.933 Info: Deleted 15 MB at 3669 MB/sec /var/opt/data1/Forests/wco/000403b6
+2025-02-18 21:10:51.366 Notice: Finished backup of forest wco to s3://wc-test-data-backup/uat/wco/20250126-2200003696000, jobid=7884140171408662800
+2025-02-18 21:10:51.438 Notice: Finishing backup of forest wco to s3://wc-test-data-backup/uat/wco/20250126-2200003696000/Forests/wco
+2025-02-18 21:10:51.483 Notice: Finished backup of forest wco to s3://wc-test-data-backup/uat/wco/20250126-2200003696000/Forests/wco
+2025-02-18 21:10:51.483 Notice: Finished 1-forest database backup to s3://wc-test-data-backup/uat/wco/20250126-2200003696000
+2025-02-18 21:15:51.061 Info: Stopping data encryption of s3://wc-test-data-backup/uat/wco/20250124-2200003083220/Forests
+2025-02-18 21:15:51.523 Info: Deleted 184006 MB in 59 sec at 3104 MB/sec s3://wc-test-data-backup/uat/wco/20250119-2200003531760
+2025-02-18 21:20:51.224 Info: Memory 41% phys=63610 size=27005(42%) rss=6108(9%) huge=20480(32%) anon=5729(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 21:20:51.396 Info: Memory 42% phys=63610 size=27275(42%) rss=6383(10%) huge=20480(32%) anon=5999(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 21:30:51.224 Info: Memory 41% phys=63610 size=27005(42%) rss=6108(9%) huge=20480(32%) anon=5729(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 21:30:51.396 Info: Memory 42% phys=63610 size=27275(42%) rss=6383(10%) huge=20480(32%) anon=5999(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 21:40:51.224 Info: Memory 41% phys=63610 size=27005(42%) rss=6108(9%) huge=20480(32%) anon=5729(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 21:40:51.396 Info: Memory 42% phys=63610 size=27275(42%) rss=6383(10%) huge=20480(32%) anon=5999(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 20:53:07.197 Info: Memory 42% phys=63610 size=27389(43%) rss=6491(10%) huge=20480(32%) anon=6114(9%) file=449(0%) forest=4181(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 20:53:07.266 Info: Memory 42% phys=63610 size=27351(42%) rss=6494(10%) huge=20480(32%) anon=6076(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 20:58:07.177 Info: Memory 42% phys=63610 size=27349(42%) rss=6456(10%) huge=20480(32%) anon=6074(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 20:58:07.301 Info: Memory 41% phys=63610 size=27108(42%) rss=6213(9%) huge=20480(32%) anon=5833(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 20:58:07.574 Info: Saving /var/opt/MarkLogic/Forests/Meters/00002148
+2025-02-18 20:58:07.707 Info: Saved 26 MB in 1 sec at 23 MB/sec to /var/opt/MarkLogic/Forests/Meters/00002148
+2025-02-18 20:58:07.744 Info: Merging 36 MB from /var/opt/MarkLogic/Forests/Meters/00002146 and /var/opt/MarkLogic/Forests/Meters/00002148 to /var/opt/MarkLogic/Forests/Meters/0000214a
+2025-02-18 20:58:07.813 Info: Merged 35 MB in 1 sec at 24 MB/sec to /var/opt/MarkLogic/Forests/Meters/0000214a
+2025-02-18 20:58:07.901 Info: Deleted 26 MB at 8140 MB/sec /var/opt/MarkLogic/Forests/Meters/00002146
+2025-02-18 20:58:07.904 Info: Deleted 26 MB at 8793 MB/sec /var/opt/MarkLogic/Forests/Meters/00002148
+2025-02-18 21:03:07.364 Info: Memory 41% phys=63610 size=26863(42%) rss=5966(9%) huge=20480(32%) anon=5588(8%) file=448(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 21:03:07.347 Info: Memory 41% phys=63610 size=26883(42%) rss=5986(9%) huge=20480(32%) anon=5608(8%) file=448(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 21:08:07.611 Info: Saving /var/opt/data1/Forests/wco/000403b6
+2025-02-18 21:08:07.838 Info: Saved 15 MB at 66 MB/sec to /var/opt/data1/Forests/wco/000403b6
+2025-02-18 21:08:07.866 Info: Merging 21 MB from /var/opt/data1/Forests/wco/000403b6 and /var/opt/data1/Forests/wco/000403b5 to /var/opt/data1/Forests/wco/000403b7
+2025-02-18 21:08:07.883 Info: Merged 8 MB at 25 MB/sec to /var/opt/data1/Forests/wco/000403b7
+2025-02-18 21:08:07.929 Info: Deleted 8 MB at 1750 MB/sec /var/opt/data1/Forests/wco/000403b5
+2025-02-18 21:08:07.933 Info: Deleted 15 MB at 3669 MB/sec /var/opt/data1/Forests/wco/000403b6
+2025-02-18 21:13:07.366 Notice: Finished backup of forest wco to s3://wc-test-data-backup/uat/wco/20250126-2200003696000, jobid=7884140171408662800
+2025-02-18 21:13:07.438 Notice+: Finishing backup of forest wco to s3://wc-test-data-backup/uat/wco/20250126-2200003696000/Forests/wco
+2025-02-18 21:13:07.483 Notice+: Finished backup of forest wco to s3://wc-test-data-backup/uat/wco/20250126-2200003696000/Forests/wco
+2025-02-18 21:13:07.483 Notice+: Finished 1-forest database backup to s3://wc-test-data-backup/uat/wco/20250126-2200003696000
+2025-02-18 21:18:07.061 Info: Stopping data encryption of s3://wc-test-data-backup/uat/wco/20250124-2200003083220/Forests
+2025-02-18 21:18:07.523 Info: Deleted 184006 MB in 59 sec at 3104 MB/sec s3://wc-test-data-backup/uat/wco/20250119-2200003531760
+2025-02-18 21:23:07.224 Info: Memory 41% phys=63610 size=27005(42%) rss=6108(9%) huge=20480(32%) anon=5729(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 21:23:07.396 Info: Memory 42% phys=63610 size=27275(42%) rss=6383(10%) huge=20480(32%) anon=5999(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 21:33:07.224 Info: Memory 41% phys=63610 size=27005(42%) rss=6108(9%) huge=20480(32%) anon=5729(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 21:33:07.396 Info: Memory 42% phys=63610 size=27275(42%) rss=6383(10%) huge=20480(32%) anon=5999(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 21:43:07.224 Info: Memory 41% phys=63610 size=27005(42%) rss=6108(9%) huge=20480(32%) anon=5729(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)
+2025-02-18 21:43:07.396 Info: Memory 42% phys=63610 size=27275(42%) rss=6383(10%) huge=20480(32%) anon=5999(9%) file=449(0%) forest=4182(6%) cache=20480(32%) registry=1(0%)

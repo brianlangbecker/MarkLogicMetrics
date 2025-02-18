@@ -1,7 +1,7 @@
 receivers:
   filelog:
     include:
-      - '/Users/brianlangbecker/Documents/GitHub/MarkLogicServer/MarkLogicLogs/logs/logfile.log'
+      - 'logs/*log.txt'
     # start_at: beginning
     include_file_name: false
     include_file_path: true
@@ -54,7 +54,7 @@ exporters:
   otlp/logs:
     endpoint: 'api.honeycomb.io:443'
     headers:
-      'x-honeycomb-team': 'HONEYCOMB_API_KEY'
+      'x-honeycomb-team': 'API_KEY'
       'x-honeycomb-dataset': 'MarkLogicLogTest'
 
 service:
