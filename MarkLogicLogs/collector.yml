@@ -1,60 +1,66 @@
-processors:
-  transform:
-    log_statements:
-      - context: log
-        statements:
-          # Explicitly match lines where 'Notice' is in the sev attribute
-          - set(cache["notice_start"], attributes["msg"]) where IsMatch(attributes["sev"], "Notice")
-
-          # Initialize combined_logs if it's not already set
-          - set(cache["combined_logs"], attributes["msg"]) where cache["combined_logs"] == nil and cache["notice_start"] != nil
-
-          # Append continuation lines to the combined_logs if they match and we have a starting line
-          - set(cache["combined_logs"], Concat([cache["combined_logs"], attributes["msg"]], " ")) where IsMatch(attributes["sev"], "Notice:+") and cache["notice_start"] != nil
-
-          # Set the combined logs as the new body when processing the last continuation line
-          - set(body, cache["combined_logs"]) where cache["combined_logs"] != nil and IsMatch(attributes["sev"], "Notice:+") == false
-
-          # Clear the cache when done processing the group
-          - delete_key(cache, "notice_start") where IsMatch(attributes["sev"], "Notice:") == false
-          - delete_key(cache, "combined_logs") where IsMatch(attributes["sev"], "Notice:") == false
-
-  batch: {}
-
-  attributes:
-    actions:
-      - key: log.type
-        value: marklogic
-        action: insert
 receivers:
   filelog:
     include:
-      - /Users/brianlangbecker/Documents/GitHub/MarkLogicServer/MarkLogicLogs/logs/logfile.log
+      - '/Users/brianlangbecker/Documents/GitHub/MarkLogicServer/MarkLogicLogs/logs/logfile.log'
+    # start_at: beginning
+    include_file_name: false
+    include_file_path: true
     operators:
-      - type: regex_parser
-        regex: '^(?P<time>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{3}) (?P<sev>Info|ERROR|WARN|Notice): (?P<msg>.*)$'
-        parse_from: body
-        timestamp:
-          parse_from: attributes.time
-          layout: '%Y-%m-%d %H:%M:%S'
+      - id: parse_line
+        type: regex_parser
+        regex: '^(?P<time>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}(?:\.\d{3})?) (?P<severity>([a-zA-Z]+:?))\s?(?P<message>.*)$'
         severity:
-          parse_from: attributes.sev
-      - type: regex_parser
-        regex: '^(?P<time>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{3}) (?P<sev>Notice:\+) (?P<msg>.*)$'
-        parse_from: body
+          parse_from: attributes.severity
+          preset: default
+          overwrite_text: true
+          mapping:
+            info:
+              - 'Info:'
+            debug:
+              - 'Notice:'
+      - id: parse_time_short
+        type: time_parser
+        parse_from: attributes.time
+        layout_type: strptime
+        layout: '%Y-%m-%d %H:%M:%S'
+        if: attributes.time not contains "."
+      - id: parse_time_long
+        type: time_parser
+        parse_from: attributes.time
+        layout_type: strptime
+        layout: '%Y-%m-%d %H:%M:%S.%L'
+        if: attributes.time contains "."
+      - id: log_recombine
+        type: recombine
+        combine_field: attributes.message
+        combine_with: "\n"
+        is_first_entry: attributes.message not startsWith "+"
+      - type: move
+        from: attributes.message
+        to: body
+      - type: remove
+        field: attributes.time
+      - type: remove
+        field: attributes.severity
 
+processors:
+  batch:
+    timeout: 1s
+    send_batch_size: 10
 
 exporters:
   logging:
-    verbosity: detailed
-  otlp:
-    endpoint: "localhost:4317"
-    tls:
-      insecure: true
+    verbosity: detailed # Replaces 'loglevel' which is deprecated.
+  otlp/logs:
+    endpoint: 'api.honeycomb.io:443'
+    headers:
+      'x-honeycomb-team': 'HONEYCOMB_API_KEY'
+      'x-honeycomb-dataset': 'MarkLogicLogTest'
 
 service:
   pipelines:
     logs:
       receivers: [filelog]
-      processors: [batch, transform, attributes]
-      exporters: [logging]
+      processors: [batch]
+      exporters: [logging, otlp/logs]
+

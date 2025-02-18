@@ -1,24 +1,10 @@
 # README
 
-This document is designed to guide the process of loading MarkLogic logs into Honeycomb.
+This document is designed to guide the process of loading MarkLogic logs into Honeycomb. Logs are collected using the OpenTelemetry Collector and exported to Honeycomb using the otlp/logs exporter. Logs come in the format of single line or multiline. The collector.yml file is used to configure the collector to handle both formats. This is designed to read the newest logs from the logfile.log file.
 
 ## How to Start the Collector
 
-To start the collector, use the following command:
-
-```bash
-otelcol --config collector.yml
-```
-
-## Pointing to the `collector.yml` File
-
-Ensure the `collector.yml` configuration file is located in your current working directory or specify its full path when starting the collector. For example:
-
-```bash
-otelcol --config /path/to/collector.yml
-```
-
-## How to Test by Downloading a Local Collector
+To start the collector, use the following commands:
 
 1. Download the OpenTelemetry Collector binary from the [official releases page](https://github.com/open-telemetry/opentelemetry-collector-releases).
 
@@ -35,13 +21,20 @@ otelcol --config /path/to/collector.yml
    ./otelcol --version
    ```
 
-4. Start the collector with your configuration:
+4. Update the collector.yml file to point to the logfile.log file.
+
+5. Update the collector.yml file to point to the Honeycomb API key and dataset.
+
+- Set your HONEYCOMB_API_KEY in the collector.yml file
+- Set your HONEYCOMB_DATASET in the collector.yml file
+
+6. Start the collector with your configuration:
 
    ```bash
    ./otelcol --config collector.yml
    ```
 
-5. Test Logging Output
+7. Test Logging Output
    The following commands will produce logging output for testing purposes:
 
 ### Single Line Echo:

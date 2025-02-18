@@ -21,6 +21,7 @@ pip install -r requirements.txt
 
    - Update MARKLOGIC_MANAGE_HOST if needed (default: "http://localhost:8002")
    - Set your HONEYCOMB_API_KEY in the script
+   - Set your HONEYCOMB_DATASET in the script
    - Update USERNAME and PASSWORD if needed (default: "admin"/"admin")
 
 4. Run the script:
