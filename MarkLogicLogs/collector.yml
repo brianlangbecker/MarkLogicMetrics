@@ -54,8 +54,8 @@ exporters:
   otlp/logs:
     endpoint: 'api.honeycomb.io:443'
     headers:
-      'x-honeycomb-team': 'hcaik_01jmj9hshxppp5hehgx9s7n1q7d1wkays2tgkxndqp1dspmb4gav5s292k'
-      'x-honeycomb-dataset': 'MarkLogicLogTest'
+      'x-honeycomb-team': 'YourApiKey'
+      'x-honeycomb-dataset': 'YourDatasetName'
 
 service:
   pipelines:
