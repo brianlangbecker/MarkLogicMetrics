@@ -16,7 +16,7 @@ USERNAME = "admin"
 PASSWORD = "admin"
 
 # Honeycomb configuration
-HONEYCOMB_API_KEY = "HoneycombAPIKey"
+HONEYCOMB_API_KEY = "your_honeycomb_api_key_here"
 HONEYCOMB_DATASET = "HoneycombDatasetName"
 
 print("Initializing MarkLogic client...")
@@ -38,29 +38,7 @@ def fetch_metric(resource_type, parent_id=None):
                       f"start={start_time}&end={end_time}&period=hour")
         print(f"Metrics URL: {metrics_url}")
         
-        # First get the host name
-        host_response = manage_client.get(
-            path,
-            params={'format': 'json'},
-            headers={'Accept': 'application/json'}
-        )
-        
-        if host_response.status_code != 200:
-            print(f"Error getting host info: {host_response.text}")
-            return None
-            
-        host_data = host_response.json()
-        host_name = None
-        try:
-            host_items = host_data['host-default-list']['list-items']['list-item']
-            if host_items:
-                host_name = host_items[0].get('nameref')
-                print(f"Found host: {host_name}")
-        except (KeyError, IndexError) as e:
-            print(f"Error getting host name: {e}")
-            return None
-        
-        # Now get the metrics
+        # Get the metrics directly
         metrics_response = manage_client.get(
             path,
             params={
@@ -76,121 +54,101 @@ def fetch_metric(resource_type, parent_id=None):
         if metrics_response.status_code == 200:
             metrics_data = metrics_response.json()
             
-            metrics_list = metrics_data.get('host-metrics-list', {})
+            # Only get host name for host metrics
+            if resource_type == 'hosts':
+                host_response = manage_client.get(
+                    path,
+                    params={'format': 'json'},
+                    headers={'Accept': 'application/json'}
+                )
+                
+                if host_response.status_code == 200:
+                    host_data = host_response.json()
+                    try:
+                        host_items = host_data['host-default-list']['list-items']['list-item']
+                        if host_items:
+                            host_name = host_items[0].get('nameref')
+                            print(f"Found host: {host_name}")
+                            metrics_data['host_name'] = host_name
+                    except (KeyError, IndexError) as e:
+                        print(f"Error getting host name: {e}")
             
-            if 'metrics-relations' in metrics_list:
-                relations = metrics_list['metrics-relations']
-                metrics = relations['host-metrics-list'].get('metrics', [])
-                print(f"Found {len(metrics)} metrics")
-                # Print first 3 metrics found
-                print("First 3 metrics found:")
-                for i, metric_obj in enumerate(metrics[:3]):
-                    for metric_name, metric_info in metric_obj.items():
-                        print(f"  {metric_name}")
-                
-                # Create status data from metrics
-                status_data = {}
-                for metric_obj in metrics:
-                    for metric_name, metric_info in metric_obj.items():
-                        if 'summary' in metric_info and metric_info['summary']:
-                            summary = metric_info['summary']
-                            if 'data' in summary and 'entry' in summary['data']:
-                                entries = summary['data']['entry']
-                                if entries:
-                                    latest_entry = entries[-1]
-                                    value = latest_entry.get('value', 0)
-                                    status_data[metric_name] = value
-                
-                # Create a data structure that matches the default view
-                data = {
-                    'host-default-list': {
-                        'list-items': {
-                            'list-item': [{
-                                'nameref': host_name,
-                                'status': status_data
-                            }]
-                        }
-                    }
-                }
-                
-                # Print first 3 metrics added
-                print("\nFirst 3 metrics added to host:")
-                for i, (metric_name, value) in enumerate(list(status_data.items())[:3]):
-                    print(f"  {metric_name}: {value}")
-                
-                print(f"Added {len(status_data)} metrics to host: {host_name}")
-                return data
+            return metrics_data
             
         else:
-            print(f"Error response: {metrics_response.text}")
+            print(f"Error getting metrics: {metrics_response.text}")
             return None
             
     except Exception as e:
         print(f"Error fetching metrics: {str(e)}")
-        print(f"Full traceback:", traceback.format_exc())
+        traceback.print_exc()
         return None
 
 def collect_host_metrics(callback_options):
     """Collect all available MarkLogic host metrics."""
-    print("\nStarting metric collection...")
-    
-    # Get metrics data once
     data = fetch_metric('hosts')
-    if data and 'host-default-list' in data:
-        items = data['host-default-list']['list-items'].get('list-item', [])
-        for item in items:
-            host_name = item.get('nameref', 'unknown')
-            if 'status' in item:
-                status = item['status']
-                # Collect all available metrics
-                for metric_name, value in status.items():
+    if data:
+        metrics_list = data.get('host-metrics-list', {})
+        if 'metrics-relations' in metrics_list:
+            relations = metrics_list['metrics-relations']
+            metrics = relations['host-metrics-list'].get('metrics', [])
+            host_name = data.get('host_name', 'unknown')
+            
+            metric_count = 0
+            for metric_obj in metrics:
+                for metric_name, metric_info in metric_obj.items():
                     try:
-                        value = float(value)  # Convert to float
-                        # Create proper Observation object with source attribute
+                        value = float(metric_info.get('value', 0))
                         observation = Observation(
                             value=value,
                             attributes={
-                                "source": "database",  # Added source identifier
+                                "source": "host",
                                 "host": host_name,
                                 "metric_name": metric_name,
-                                "unit": "1"
+                                "unit": metric_info.get('units', '1')
                             }
                         )
+                        metric_count += 1
                         yield observation
-                        print(f"Added database observation for {metric_name}: {value}")
                     except (ValueError, TypeError) as e:
-                        print(f"Skipping metric {metric_name}: {e}")
+                        print(f"Error with metric {metric_name}: {e}")
+            print(f"Collected {metric_count} host metrics")
 
 def collect_database_metrics(callback_options):
     """Collect all available MarkLogic database metrics."""
-    print("\nStarting database metric collection...")
-    
-    # Get metrics data once
     data = fetch_metric('databases')
-    if data and 'database-default-list' in data:
-        items = data['database-default-list']['list-items'].get('list-item', [])
-        for item in items:
-            db_name = item.get('nameref', 'unknown')
-            if 'status' in item:
-                status = item['status']
-                # Collect all available metrics
-                for metric_name, value in status.items():
-                    try:
-                        value = float(value)  # Convert to float
-                        # Create proper Observation object with source attribute
-                        observation = Observation(
-                            value=value,
-                            attributes={
-                                "source": "database",  # Added source identifier
-                                "database": db_name,
-                                "metric_name": metric_name,
-                                "unit": "1"
-                            }
-                        )
-                        yield observation
-                        print(f"Added database observation for {db_name} - {metric_name}: {value}")
-                    except (ValueError, TypeError) as e:
-                        print(f"Skipping metric {metric_name} for database {db_name}: {e}")
+    if data:
+        metrics_list = data.get('database-metrics-list', {})
+        if 'metrics-relations' in metrics_list:
+            relations = metrics_list['metrics-relations']
+            metrics = relations['database-metrics-list'].get('metrics', [])
+            
+            metric_count = 0
+            for metric_group in metrics:
+                # Handle master metrics
+                if 'master' in metric_group:
+                    for metric_obj in metric_group['master']:
+                        for metric_name, metric_info in metric_obj.items():
+                            try:
+                                # Get the value from the first entry
+                                entries = metric_info.get('summary', {}).get('data', {}).get('entry', [])
+                                if entries:
+                                    value = float(entries[0].get('value', 0))
+                                    observation = Observation(
+                                        value=value,
+                                        attributes={
+                                            "source": "database",
+                                            "metric_name": metric_name,
+                                            "unit": metric_info.get('units', '1'),
+                                            "type": "master"
+                                        }
+                                    )
+                                    metric_count += 1
+                                    yield observation
+                            except (ValueError, TypeError, IndexError) as e:
+                                print(f"Error with metric {metric_name}: {e}")
+            
+            print(f"Collected {metric_count} database metrics")
 
 # Now configure OpenTelemetry
 print("Configuring OpenTelemetry with Honeycomb...")
@@ -272,20 +230,12 @@ def main():
         while True:
             print(f"\n=== Collection Cycle at {time.strftime('%Y-%m-%d %H:%M:%S')} ===")
             
-            # Force metric collection and export for hosts
-            # host_metrics_list = list(collect_host_metrics(None))
+            # For debugging only - collect and print metrics
+            host_metrics_list = list(collect_host_metrics(None))
             print(f"Collected {len(host_metrics_list)} host metrics")
             
-            # Force metric collection and export for databases
             db_metrics_list = list(collect_database_metrics(None))
             print(f"Collected {len(db_metrics_list)} database metrics")
-            
-            # Explicitly observe each metric
-            for observation in host_metrics_list:
-                host_metrics.observe(observation.value, observation.attributes)
-                
-            for observation in db_metrics_list:
-                database_metrics.observe(observation.value, observation.attributes)
             
             # Force export
             honeycomb_reader.force_flush()
