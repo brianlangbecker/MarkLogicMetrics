@@ -49,12 +49,12 @@ processors:
     send_batch_size: 10
 
 exporters:
-  logging:
-    verbosity: detailed # Replaces 'loglevel' which is deprecated.
+  debug:
+    verbosity: detailed
   otlp/logs:
     endpoint: 'api.honeycomb.io:443'
     headers:
-      'x-honeycomb-team': 'API_KEY'
+      'x-honeycomb-team': 'hcaik_01jmj9hshxppp5hehgx9s7n1q7d1wkays2tgkxndqp1dspmb4gav5s292k'
       'x-honeycomb-dataset': 'MarkLogicLogTest'
 
 service:
@@ -62,5 +62,5 @@ service:
     logs:
       receivers: [filelog]
       processors: [batch]
-      exporters: [logging, otlp/logs]
+      exporters: [debug, otlp/logs]
 

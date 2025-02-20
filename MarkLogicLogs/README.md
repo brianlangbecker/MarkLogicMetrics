@@ -4,7 +4,14 @@ Collects MarkLogic logs and exports them to Honeycomb using OpenTelemetry Collec
 
 ## Setup
 
-1. Download and install the OpenTelemetry Collector from the [official releases page](https://github.com/open-telemetry/opentelemetry-collector-releases)
+1. Download and install the OpenTelemetry Collector Contrib from the [official releases page](https://github.com/open-telemetry/opentelemetry-collector-releases/releases)
+
+   - Look for the latest `otelcol-contrib` release
+   - The contrib version is required for the filelog receiver
+   - After downloading, make the binary executable:
+     ```bash
+     chmod 755 otelcol-contrib
+     ```
 
 2. Configure collector.yml:
 
@@ -18,7 +25,7 @@ Collects MarkLogic logs and exports them to Honeycomb using OpenTelemetry Collec
 
 3. Start the collector:
    ```bash
-   otelcol --config collector.yml
+   ./otelcol-contrib --config collector.yml
    ```
 
 ## Test Log Generation
