@@ -1,69 +1,49 @@
-# MarkLogic Metrics Collector
+# MarkLogic Log Collector
 
-Collects metrics from MarkLogic and exports them to Honeycomb using OpenTelemetry.
+Collects MarkLogic logs and exports them to Honeycomb using OpenTelemetry Collector.
 
-## Setup Instructions
+## Requirements
 
-1. Create and activate a virtual environment:
+- Python 3.7
+- pip (latest version)
 
-```bash
-python -m venv venv
-source venv/bin/activate
-```
+## Setup
 
-2. Install the required packages:
+1. Create and activate a Python virtual environment:
 
-```bash
-pip install -r requirements.txt
-```
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On macOS/Linux
+   # Or on Windows:
+   # .\venv\Scripts\activate
+   ```
 
-3. Configure the script:
+2. Install dependencies:
 
-   - Update MARKLOGIC_MANAGE_HOST if needed (default: "http://localhost:8002")
-   - Set your HONEYCOMB_API_KEY in the script
-   - Set your HONEYCOMB_DATASET in the script
-   - Update USERNAME and PASSWORD if needed (default: "admin"/"admin")
+   ```bash
+   pip install --upgrade pip
+   # You may need to install git if not already installed
+   pip install -r requirements.txt
+   ```
 
-4. Run the script:
+3. Update configuration in `marklogic_honeycomb_metrics.py`:
 
-```bash
-python marklogic_honeycomb_metrics.py
-```
+   ```python
+   # MarkLogic Management API configuration
+   MARKLOGIC_MANAGE_HOST = "http://localhost:8002"  # Update if needed
+   USERNAME = "admin"                               # Update if needed
+   PASSWORD = "admin"                               # Update if needed
 
-## Expected Output
+   # Honeycomb configuration
+   HONEYCOMB_API_KEY = "YourHoneycombAPIKey"       # Required
+   HONEYCOMB_DATASET = "YourHoneycombDatasetName"  # Required
+   ```
 
-You should see:
+4. Run the collector:
+   ```bash
+   python3 marklogic_honeycomb_metrics.py
+   ```
 
-- Metrics being collected from MarkLogic
-- Console output showing metric values
-- Metrics being exported to Honeycomb
+## License
 
-## Stopping the Collector
-
-Press Ctrl+C to stop the collector. It will flush any remaining metrics before exiting.
-
-## Troubleshooting
-
-1. If you see connection errors:
-
-   - Verify MarkLogic is running
-   - Check your host/port settings
-   - Verify username/password
-
-2. If metrics aren't appearing in Honeycomb:
-   - Verify your API key
-   - Check the console output for errors
-   - Verify network connectivity
-
-## Development
-
-The project structure is:
-
-```
-marklogic-metrics/
-├── .gitignore
-├── README.md
-├── requirements.txt
-├── setup.py
-└── marklogic_honeycomb_metrics.py
-```
+MIT

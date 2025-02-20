@@ -16,8 +16,8 @@ USERNAME = "admin"
 PASSWORD = "admin"
 
 # Honeycomb configuration
-HONEYCOMB_API_KEY = "KEY"
-HONEYCOMB_DATASET = "MarkLogicMetrics"
+HONEYCOMB_API_KEY = "HoneycombAPIKey"
+HONEYCOMB_DATASET = "HoneycombDatasetName"
 
 print("Initializing MarkLogic client...")
 manage_client = Client(MARKLOGIC_MANAGE_HOST, digest=(USERNAME, PASSWORD))
