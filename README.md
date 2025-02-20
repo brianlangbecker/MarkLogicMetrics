@@ -21,9 +21,9 @@ Collects MarkLogic logs and exports them to Honeycomb using OpenTelemetry Collec
 2. Install dependencies:
 
    ```bash
-   pip install --upgrade pip
+   pip3 install --upgrade pip
    # You may need to install git if not already installed
-   pip install -r requirements.txt
+   pip3 install -r requirements.txt
    ```
 
 3. Update configuration in `marklogic_honeycomb_metrics.py`:
