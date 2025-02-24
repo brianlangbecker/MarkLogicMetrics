@@ -1,45 +1,62 @@
 # MarkLogic Log Collector
 
-Collects MarkLogic logs and exports them to Honeycomb using OpenTelemetry Collector.
+Collects MarkLogic logs and exports them to Honeycomb using OpenTelemetry Collector. Installing this directly on the MarkLogic AMI is not recommended due to dependency issues. It best to install this on a separate small EC2 instance.
 
-## Requirements
-
-- Python 3.7
+- Python 3.7 or higher
 - pip (latest version)
 
 ## Setup
 
-1. Create and activate a Python virtual environment:
+1. Install Python (if not already installed):
+
+   On Amazon Linux:
 
    ```bash
-   python3 -m venv venv
-   source venv/bin/activate  # On macOS/Linux
-   # Or on Windows:
-   # .\venv\Scripts\activate
+   # Install development tools
+   sudo yum groupinstall "Development Tools"
+
+   # Install Python and development headers
+   sudo amazon-linux-extras install python3
+   sudo yum install python3-devel
    ```
 
-2. Install dependencies:
+2. Create and activate a Python virtual environment:
+
+   ```bash
+   # Create virtual environment
+   python3 -m venv venv
+
+   # Activate virtual environment
+   source venv/bin/activate
+   ```
+
+3. Install dependencies:
 
    ```bash
    pip3 install --upgrade pip
-   # You may need to install git if not already installed
    pip3 install -r requirements.txt
    ```
 
-3. Update configuration in `marklogic_honeycomb_metrics.py`:
+4. Create a .env file with your credentials:
 
-   ```python
-   # MarkLogic Management API configuration
-   MARKLOGIC_MANAGE_HOST = "http://localhost:8002"  # Update if needed
-   USERNAME = "admin"                               # Update if needed
-   PASSWORD = "admin"                               # Update if needed
-
-   # Honeycomb configuration
-   HONEYCOMB_API_KEY = "YourHoneycombAPIKey"       # Required
-   HONEYCOMB_DATASET = "YourHoneycombDatasetName"  # Required
+   ```bash
+   # Create and edit .env file
+   cp .env.example .env
+   vi .env
    ```
 
-4. Run the collector:
+   Update the following variables:
+
+   ```
+   MARKLOGIC_MANAGE_HOST=http://localhost:8002
+   MARKLOGIC_USERNAME=your_username
+   MARKLOGIC_PASSWORD=your_password
+   HONEYCOMB_API_KEY=your_api_key
+   HONEYCOMB_DATASET=your_dataset
+   ```
+
+5. Run the collector:
+
    ```bash
    python3 marklogic_honeycomb_metrics.py
    ```

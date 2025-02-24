@@ -1,3 +1,4 @@
+import urllib3
 from opentelemetry import metrics
 from opentelemetry.sdk.metrics import MeterProvider
 from opentelemetry.sdk.metrics.export import PeriodicExportingMetricReader, ConsoleMetricExporter
@@ -10,6 +11,9 @@ from datetime import datetime
 import traceback
 from opentelemetry.metrics._internal.observation import Observation
 
+# Disable SSL warnings since we're using verify=False
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 # MarkLogic Management API configuration
 MARKLOGIC_MANAGE_HOST = "http://localhost:8002"  # For management API
 USERNAME = "admin"
@@ -20,7 +24,7 @@ HONEYCOMB_API_KEY = "your_honeycomb_api_key_here"
 HONEYCOMB_DATASET = "HoneycombDatasetName"
 
 print("Initializing MarkLogic client...")
-manage_client = Client(MARKLOGIC_MANAGE_HOST, digest=(USERNAME, PASSWORD))
+manage_client = Client(MARKLOGIC_MANAGE_HOST, digest=(USERNAME, PASSWORD), verify=False)  # Disable SSL verification
 
 def fetch_metric(resource_type, parent_id=None):
     """Fetch metrics from MarkLogic using the Client."""
@@ -255,4 +259,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
